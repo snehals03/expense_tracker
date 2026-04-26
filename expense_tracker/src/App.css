@@ -1,0 +1,225 @@
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* Page Title */
+h2 {
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: 32px;
+  color: #111827;
+}
+
+/* Form Row */
+.formRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Inputs + Dropdown */
+input,
+select {
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  height: 44px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #111827;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.18);
+}
+
+/* Make inputs wider */
+input {
+  width: 220px;
+}
+
+/* Dropdown width */
+select {
+  width: 200px;
+  height: 44px;
+}
+
+/* Button */
+button {
+  height: 44px;
+  padding: 0 18px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #3f9843;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.24);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(76, 175, 80, 0.35);
+  outline-offset: 2px;
+}
+
+/* Task 4 */
+.totalBox {
+  margin-bottom: 24px;
+  padding: 28px 20px;
+  background: linear-gradient(135deg, #ffffff, #eef7ef);
+  border: 1px solid #dcefe0;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.totalBox h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #256029;
+}
+
+/* Task 7 */
+.searchInput {
+  display: block;
+  margin: 0 auto 28px;
+  width: 320px;
+  max-width: 100%;
+  background: #ffffff;
+}
+
+/* List */
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 0 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #334155;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Task 3 */
+.deleteButton {
+  background: #dc2626;
+  min-width: 78px;
+}
+
+.deleteButton:hover {
+  background: #b91c1c;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.22);
+}
+
+/* Task 5 */
+/* Task 6 */
+.chartsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.chartBox {
+  min-height: 380px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.chartBox h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #111827;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .chartsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    align-items: stretch;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .totalBox h3 {
+    font-size: 20px;
+  }
+
+  li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .deleteButton {
+    width: 100%;
+  }
+}
